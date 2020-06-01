@@ -53,7 +53,7 @@
                     <tr v-for="(file, index) in allFiles.data" :rel="file.id" class="list">
                         <td scope="row" class="text-center">{{index+1}}</td>
                         <td>{{file.title}}</td>
-                        <td><a :href="/filedownload/+file.path" class="downloadFileLink">{{file.file_name}}</a></td>
+                        <td><a :href="/filedownload/+file.file_name" class="downloadFileLink">{{file.file_name}}</a></td>
                         <td>{{file.mime}}</td>
                         <td>{{file.size}}</td>
                         <td>{{file.status}}</td>

@@ -10,9 +10,9 @@ use Illuminate\Support\Facades\Storage;
 
 class FileDownloadController extends Controller
 {
-    public function fileDownload($name = null)
+    public function fileDownload($file_name = null)
     {
-        return response()->download($name);
+        return response()->download(storage_path('app/public/' . $file_name));
     }
 
     public function fileDelete($id)
